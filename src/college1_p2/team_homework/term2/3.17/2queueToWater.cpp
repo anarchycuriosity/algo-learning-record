@@ -72,16 +72,18 @@ int main()
         queue[i].T = T;
     }
     mergeSort(queue, 1, n);
-    double wait = queue[1].T;
+    // 等待时间的计算不太对
+    // 应该是第n个人要等待前n-1个人的接水时间
     for (int i = 1; i <= n; i++)
     {
         std::cout << queue[i].ind << " ";
-        double rest = 0;
-        if (i != 1)
-        {
-            rest = queue[i].T - wait;
-        }
-        wait += rest;
+    }
+    double wait = 0;
+    double sum = 0;
+    for (int i = 1; i <= n - 1; i++)
+    {
+        sum += queue[i].T;
+        wait += sum;
     }
     std::cout << std::endl;
     /*
