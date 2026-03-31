@@ -21,16 +21,20 @@ int main()
         {
             std::string str;
             std::cin >> str;
-
-            diction[str].push_back(i);
+            if (diction[str].empty() || diction[str][diction[str].size() - 1] != i) // 这里应该用逻辑或
+            {
+                diction[str].push_back(i);
+            }
         }
     }
     int M;
     std::cin >> M;
-    std::string ques[M];
+    std::vector<std::string> ques;
     for (int i = 0; i < M; i++)
     {
-        std::cin >> ques[i];
+        std::string str;
+        std::cin >> str;
+        ques.push_back(str);
     }
     for (int i = 0; i < M; i++)
     {
@@ -40,6 +44,10 @@ int main()
             {
                 std::cout << diction[ques[i]][j] << " ";
             }
+            std::cout << std::endl;
+        }
+        else
+        {
             std::cout << std::endl;
         }
     }
