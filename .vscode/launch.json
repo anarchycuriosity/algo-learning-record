@@ -15,3 +15,22 @@
         }
     ]
 }
+
+
+// {
+//     "version": "0.2.0",
+//     "configurations": [
+//         {
+//             "name": "Debug Algorithm",
+//             "type": "cppdbg",
+//             "request": "launch",
+//             "program": "${workspaceFolder}/bin/${fileBasenameNoExtension}.exe",
+//             "args": [],
+//             "stopAtEntry": false,
+//             "cwd": "${workspaceFolder}/bin/",
+//             "environment": [],
+//             "MIMode": "gdb",
+//             "preLaunchTask": "CMake Build Current"
+//         }
+//     ]
+// }

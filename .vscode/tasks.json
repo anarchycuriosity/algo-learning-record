@@ -46,3 +46,36 @@
         }
     ]
 }
+
+
+
+// {
+//     "version": "2.0.0",
+//     "tasks": [
+//         {
+//             "label": "CMake Config",
+//             "type": "shell",
+//             "command": "cmake",
+//             "args": [
+//                 "-S", ".",
+//                 "-B", "build",
+//                 "-G", "MinGW Makefiles"
+//             ]
+//         },
+//         {
+//             "label": "CMake Build Current",
+//             "type": "shell",
+//             "command": "cmake",
+//             "args": [
+//                 "--build", "build",
+//                 "--target", "${fileBasenameNoExtension}"
+//             ],
+//             "group": {
+//                 "kind": "build",
+//                 "isDefault": true
+//             },
+//             "dependsOn": [ "CMake Config" ],
+//             "problemMatcher": "$gcc"
+//         }
+//     ]
+// }
